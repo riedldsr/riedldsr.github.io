@@ -61,6 +61,7 @@ header .decorator {
 	z-index: -1;
 	right: -100vw;
 	transition-duration: 250ms;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 #menu.displayed {
@@ -68,7 +69,7 @@ header .decorator {
 }
 
 #menu ul {
-	margin-top: 130px;
+	margin-top: 140px;
 	margin-right: 50px;
 	list-style: none;
 	margin-bottom: 50px;
@@ -80,12 +81,31 @@ header .decorator {
 	line-height: 6rem;
 	width: 30%;
 	margin-left: auto;
+}
+
+#menu ul li:not(:last-child) {
 	border-bottom: 1px solid var(--mid-brown);
 }
 
 footer .decorator {
 	transform: rotate(180deg);
 	bottom: -2px;
+}
+
+footer .social {
+	position: fixed;
+	width: 80px;
+	z-index: 2;
+}
+
+#instagram {
+	right: 50px;
+	bottom: 125px;
+}
+
+#facebook {
+	right: 125px;
+	bottom: 50px;
 }
 
 main {

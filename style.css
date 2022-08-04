@@ -37,10 +37,13 @@ footer .decorator {
 }
 
 main {
-	margin: 15vh 0vw 1vh 10vw;
+	height: 100vh;
+	width: 100vw;
+	position: relative;
 }
 
 main h2 {
+	position: absolute;
 	text-align: right;
 	margin: 35vh 15vw 0px 0vw;
 	font-size: 5rem;
@@ -52,6 +55,7 @@ main h2 {
 #treeImage {
 	height: 50vh;
 	margin-top: 12vh;
-	float: right;
-	
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }

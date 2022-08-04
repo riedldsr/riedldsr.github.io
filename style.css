@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
+	--light-brown: #E4B7A0;
+	--mid-brown: #C38370;
+	--dark-brown: #A45C40;
+	--white-50: rgba(224, 252, 255, 0.5);
+	--white-75: rgba(224, 252, 255, 0.75);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: var(--light-brown);
+	color: var(--dark-brown);
+	height: 100vh;
+	overflow: hidden;
+}
+
+.decorator {
+	position: fixed;
+	width: 100%;
+	filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+header .decorator {
+	top: 0px;
+}
+
+footer .decorator {
+	transform: rotate(180deg);
+	bottom: 0px;
+}
+
+main {
+	margin: 15vh 0vw 1vh 10vw;
+}
+
+main h2 {
+	text-align: right;
+	margin: 35vh 15vw 0px 0vw;
+	font-size: 5rem;
+	line-height: 6rem;
+	font-family: 'Special Elite';
+	font-weight: 100;
+}
+
+#treeImage {
+	height: 50vh;
+	margin-top: 12vh;
+	float: right;
+	
+}

@@ -18,13 +18,13 @@ body {
 	background-color: var(--light-brown);
 	color: var(--dark-brown);
 	height: 100vh;
-	overflow: hidden;
 }
 
 .decorator {
 	position: fixed;
 	width: 100%;
 	filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+
 }
 
 header .decorator {
@@ -44,8 +44,9 @@ main {
 
 main h2 {
 	position: absolute;
+	top: 30%;
+	right: 20%;
 	text-align: right;
-	margin: 35vh 15vw 0px 0vw;
 	font-size: 5rem;
 	line-height: 6rem;
 	font-family: 'Special Elite';
@@ -54,7 +55,6 @@ main h2 {
 
 #treeImage {
 	height: 50vh;
-	margin-top: 12vh;
 	position: absolute;
 	bottom: 0px;
 	right: 0px;

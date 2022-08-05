@@ -13,3 +13,34 @@ function showMenu() {
 		main.classList.add("blur");
 	}
 }
+
+function sendEmail() {
+	inputName = document.querySelector("#inputName").value;
+	inputEmail = document.querySelector("#inputEmail").value;
+	inputSubject = document.querySelector("#inputSubject").value;
+	inputMessage = document.querySelector("#inputMessage").value;
+
+	
+	if(inputName && inputEmail && inputSubject && inputMessage) {
+		var data = "inputName=" + encodeURIComponent(inputName) + "&inputEmail=" + encodeURIComponent(inputEmail) + "&inputSubject=" +
+		encodeURIComponent(inputSubject) + "&inputMessage=" + encodeURIComponent(inputMessage);
+		fetch("http://localhost:8080/emails", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/x-www-form-urlencoded"
+			},
+			body: data
+
+		}).then((response) => {
+			if(response.body == 'error') {
+				alert("Message failed to send...");
+			} else {
+				inputName = "";
+				inputEmail = "";
+				inputSubject = "";
+				inputMessage = "";
+				alert("Message sent successfully!");
+			}
+		});
+	}
+}

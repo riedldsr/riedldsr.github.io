@@ -240,6 +240,8 @@ input, textarea {
 	outline: 0px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 	color: var(--dark-brown);
+	transition-property: background-color;
+	transition-duration: 500ms;
 }
 
 input:focus, textarea:focus {

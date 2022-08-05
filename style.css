@@ -12,6 +12,12 @@
 	--white: #E0FCFF;
 }
 
+@keyframes treeAnimation {
+	0% { transform: translate(0px, 0px) rotate(0deg); }
+	50% { transform: translate(-20px, -10px) rotate(2deg); }
+	100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+
 * {
 	box-sizing: border-box;
 	margin: 0px;
@@ -152,6 +158,9 @@ main h2 {
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
+	animation-name: treeAnimation;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
 
 #mainContent {
@@ -229,7 +238,7 @@ input, textarea {
 	background-color: var(--white-75);
 	border: 0px;
 	outline: 0px;
-	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 	color: var(--dark-brown);
 }
 
@@ -254,4 +263,5 @@ input::placeholder, textarea::placeholder {
 	background-color: var(--dark-brown);
 	color: var(--white-75);
 	border: 0px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }

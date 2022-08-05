@@ -149,7 +149,7 @@ main h2 {
 }
 
 #mainContent {
-	padding: 12vh 10vw;
+	padding: 12vh 0px;
 	text-align: right;
 }
 
@@ -157,14 +157,12 @@ h1 {
 	font-size: 5.5rem;
 	font-weight: 200;
 	width: 70%;
-	margin-left: auto;
-	margin-bottom: 50px;
+	margin: 0px 10vw 50px auto;
 	border-bottom: 2px solid var(--white-75);
 }
 
 .paragraphWrapper {
 	background: linear-gradient(270deg, var(--white-50), rgba(0, 0, 0, 0));
-	margin: 0px -10vw;
 }
 
 .paragraphWrapper.left {
@@ -182,4 +180,30 @@ p {
 	display: block;
 	margin: 50px auto;
 	box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.75);
+}
+
+.imageContainer {
+	width: 75%;
+	margin-left: auto;
+	text-align: left;
+}
+
+.imageContainer:nth-of-type(2n) {
+	margin-left: 0px;
+	margin-right: auto;
+	text-align: right;
+}
+
+.imageContainer img {
+	width: 100%;
+	padding: 10% 10% 10% 0px;
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+.imageContainer:nth-of-type(2n) img {
+	padding: 10% 0px 10% 10%;
+}
+
+.imageContainer:not(:last-of-type) img {
+	border-bottom: 2px solid var(--dark-brown);
 }

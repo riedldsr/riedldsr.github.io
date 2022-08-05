@@ -129,6 +129,11 @@ main {
 	height: 100%;
 	width: 100vw;
 	position: relative;
+	transition-duration: 500ms;
+}
+
+main.blur {
+	filter: blur(8px);
 }
 
 main h2 {

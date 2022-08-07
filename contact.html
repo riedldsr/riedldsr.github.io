@@ -1,13 +1,13 @@
 <html>
 	<head>
-		<title>Depicted Cryptids</title>
+		<title>Depicted Cryptids - Contact</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<header>
 			<img src="images/head-swoop.svg" class="decorator" />
 			<a href="index.html"><img src="images/logo.png" id="logo" /></a>
-			<img src="images/menu-icon.svg" id="menuIcon" onclick="showMenu()" />
+			<img src="images/menu-icon.svg" id="menuIcon" onclick="toggleOverlay()" />
 			<div id="menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -16,6 +16,7 @@
 					<li>Contact</li>
 				</ul>
 			</div>
+			<div id="overlay" onclick="toggleOverlay()"></div>
 		</header>
 		<main>
 			<div id="mainContent">

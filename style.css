@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* Variables and Animations */
+
 :root {
 	--light-brown: #E4B7A0;
 	--light-brown-50: rgba(228, 183, 160, 0.5);
@@ -17,6 +19,8 @@
 	50% { transform: translate(-20px, -10px) rotate(2deg); }
 	100% { transform: translate(0px, 0px) rotate(0deg); }
   }
+
+/* Generic */
 
 * {
 	box-sizing: border-box;
@@ -37,6 +41,31 @@ body {
 	color: var(--dark-brown);
 }
 
+main {
+	height: 100%;
+	width: 100vw;
+	position: relative;
+}
+
+main.blur {
+	filter: blur(8px);
+}
+
+h1 {
+	font-size: 60pt;
+	font-weight: 200;
+	width: 70%;
+	margin: 0px 10vw 50px auto;
+	border-bottom: 2px solid var(--white-75);
+}
+
+p {
+	font-size: 27pt;
+	padding: 25px 10vw 25px 10vw;
+}
+
+/* Header and Footer */
+
 .decorator {
 	position: fixed;
 	width: 100%;
@@ -46,14 +75,14 @@ body {
 
 header .decorator {
 	top: 0px;
-	z-index: 2;
+	z-index: 3;
 }
 
 #logo {
 	position: fixed;
 	top: 30px;
 	left: 30px;
-	z-index: 2;
+	z-index: 3;
 }
 
 #menuIcon {
@@ -72,15 +101,19 @@ header .decorator {
 	position: fixed;
 	width: 100%;
 	color: var(--white-75);
-	background-color: var(--dark-brown);
-	border-radius: 0px 0px 50px 50px;
-	right: -100vw;
-	transition-duration: 250ms;
+	background: var(--dark-brown);
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-	z-index: 1;
+	top: -500px;
+	height: 650px;
+	transition: top 250ms;
+	z-index: 2;
 }
 
 #menu.displayed {
+	top: 0px;
+}
+
+#overlay.displayed {
 	right: 0px;
 }
 
@@ -91,11 +124,16 @@ header .decorator {
 	margin-bottom: 50px;
 	text-align: right;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
+	display: none;
+}
+
+#menu ul.displayed {
+	display: block;
 }
 
 #menu ul li {
-	font-size: 3.5rem;
+	font-size: 40pt;
 	line-height: 7rem;
 	width: 30%;
 	margin-left: auto;
@@ -110,15 +148,26 @@ header .decorator {
 	border-bottom: 1px solid var(--mid-brown);
 }
 
+#overlay {
+	position: fixed;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	right: -100vw;
+	height: 100vh;
+	z-index: 1;
+	transition: right 500ms;
+}
+
 footer .decorator {
 	transform: rotate(180deg);
 	bottom: -2px;
+	z-index: 3;
 }
 
 footer .social {
 	position: fixed;
 	width: 80px;
-	z-index: 2;
+	z-index: 3;
 }
 
 #instagram {
@@ -131,24 +180,15 @@ footer .social {
 	bottom: 50px;
 }
 
-main {
-	height: 100%;
-	width: 100vw;
-	position: relative;
-	transition-duration: 500ms;
-}
-
-main.blur {
-	filter: blur(8px);
-}
+/* Home */
 
 main h2 {
 	position: absolute;
 	top: 30%;
 	right: 20%;
 	text-align: right;
-	font-size: 5rem;
-	line-height: 6rem;
+	font-size: 60pt;
+	line-height: 75pt;
 	font-family: 'Special Elite';
 	font-weight: 100;
 }
@@ -163,17 +203,21 @@ main h2 {
 	animation-iteration-count: infinite;
 }
 
+/* About */
+
 #mainContent {
 	padding: 12vh 0px;
 	text-align: right;
 }
 
-h1 {
-	font-size: 5.5rem;
-	font-weight: 200;
-	width: 70%;
-	margin: 0px 10vw 50px auto;
-	border-bottom: 2px solid var(--white-75);
+#topMask {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 200px;
+	background-image: url("images/background-canvas-fade.png");
+	z-index: 2;
+	background-repeat: repeat;
 }
 
 .paragraphWrapper {
@@ -185,17 +229,14 @@ h1 {
 	background: linear-gradient(90deg, var(--white-50), rgba(0, 0, 0, 0));
 }
 
-p {
-	font-size: 2.3rem;
-	padding: 25px 10vw 25px 10vw;
-}
-
 #kish {
 	width: 80%;
 	display: block;
 	margin: 50px auto;
 	box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.75);
 }
+
+/* Portfolio */
 
 .imageContainer {
 	width: 75%;
@@ -223,6 +264,22 @@ p {
 	border-bottom: 2px solid var(--dark-brown);
 }
 
+#fullScreenImage {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+
+#fullScreenImage.displayed {
+	opacity: 1;
+}
+
+/* Contact Form */
+
 #contactForm {
 	width: 80%;
 	margin: auto;
@@ -232,7 +289,7 @@ p {
 input, textarea {
 	display: block;
 	width: 100%;
-	font-size: 3rem;
+	font-size: 35pt;
 	padding: 2rem;
 	margin: 50px 0px;
 	background-color: var(--white-75);
@@ -260,7 +317,7 @@ input::placeholder, textarea::placeholder {
 	display: block;
 	width: 50%;
 	margin-right: auto;
-	font-size: 3rem;
+	font-size: 35pt;
 	padding: 2rem;
 	background-color: var(--dark-brown);
 	color: var(--white-75);

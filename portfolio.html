@@ -1,13 +1,13 @@
 <html>
 	<head>
-		<title>Depicted Cryptids</title>
+		<title>Depicted Cryptids - Portfolio</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<header>
 			<img src="images/head-swoop.svg" class="decorator" />
 			<a href="index.html"><img src="images/logo.png" id="logo" /></a>
-			<img src="images/menu-icon.svg" id="menuIcon" onclick="showMenu()" />
+			<img src="images/menu-icon.svg" id="menuIcon" onclick="toggleOverlay()" />
 			<div id="menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -16,9 +16,14 @@
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</div>
+			<!-- Full screen image -->
+			<div id="overlay" onclick="toggleOverlay()">
+				<img src="" id="fullScreenImage" />
+			</div>
 		</header>
 		<main>
 			<div id="mainContent">
+				
 				<h1>Portfolio</h1>
 				<div class="imageContainer">
 					<img src="images/duck1.jpg" />

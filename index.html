@@ -11,7 +11,7 @@
 		<header>
 			<img src="images/head-swoop.svg" class="decorator" />
 			<a href="index.html"><img src="images/logo.png" id="logo" /></a>
-			<img src="images/menu-icon.svg" id="menuIcon" onclick="showMenu()" />
+			<img src="images/menu-icon.svg" id="menuIcon" onclick="toggleOverlay()" />
 			<div id="menu">
 				<ul>
 					<li>Home</li>
@@ -20,6 +20,7 @@
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</div>
+			<div id="overlay" onclick="toggleOverlay()"></div>
 		</header>
 		<main>
 			<h2>Let me show you<br>some of my...<br>creations</h2>

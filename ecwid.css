@@ -98,10 +98,15 @@
 	display: none !important;
 }
 
-.ecwid input {
+.ecwid input, .ecwid textarea {
 	background-color: var(--white-75) !important;
 	border: 0px !important;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5) !important;
+	color: var(--dark-brown) !important;
+}
+
+.form-control__placeholder div {
+	color: #000 !important;
 }
 
 .ecwid input:focus {
@@ -110,6 +115,10 @@
 
 .ec-cart-item__control svg {
 	color: var(--dark-brown) !important;
+}
+
+.ec-cart__body-inner {
+	margin-top: 5% !important;
 }
 
 @media screen and (orientation: landscape) {

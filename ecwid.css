@@ -1,0 +1,126 @@
+/* Store - Overriding crappy ecwid design */
+
+.ecwid div {
+	background-color: transparent !important;
+}
+
+.ecwid {
+	font-weight: 100 !important;
+}
+
+.grid__products {
+	display: grid !important;
+	row-gap: 3%;
+}
+
+.grid-product {
+	display: block !important;
+	margin: auto 10px !important;
+	border: 1px solid var(--dark-brown) !important;
+}
+
+.grid-product__title-inner {
+	font-size: 1.5rem !important;
+}
+
+.ec-price-item {
+	font-size: 1.2rem !important;
+}
+
+.ecwid-productBrowser {
+	padding: 0px !important;
+}
+
+.product-details {
+	display: grid !important;
+}
+
+.product-details__gallery {
+	display: block !important;
+	margin: auto !important;
+	width: 80% !important;
+	max-width: auto !important;
+	padding: 2% 0px !important;
+}
+
+.product-details__sidebar {
+	display: block !important;
+	width: 100% !important;
+	padding: 3% 10% !important;
+	margin: auto !important;
+	background: linear-gradient(90deg, var(--white-50), rgba(0, 0, 0, 0)) !important;
+}
+
+.ec-store h1 {
+	font-size: 2rem !important;
+}
+
+.details-product-price__value {
+	font-size: 1.5rem !important;
+	font-style: italic;
+}
+
+.form-control__button {
+	font-size: 1.2rem !important;
+	padding: 0.8rem !important;
+	background-color: var(--dark-brown) !important;
+	color: var(--white-75) !important;
+	font-weight: 100 !important;
+	width: auto !important;
+}
+
+.product-details-module__title {
+	font-size: 1.3rem !important;
+}
+
+.product-details__product-description p {
+	font-size: 1.2rem !important;
+}
+
+.ec-cart {
+	display: grid !important;
+	width: 100% !important;
+}
+
+.ec-cart__sidebar {
+	width: 80% !important;
+	margin: auto !important;
+}
+
+.ec-cart__body {
+	width: 80% !important;
+	margin: auto !important;
+	padding: 0px !important;
+}
+
+.page-title__name {
+	display: none !important;
+}
+
+.ecwid input {
+	background-color: var(--white-75) !important;
+	border: 0px !important;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.ecwid input:focus {
+	background-color: var(--white);
+}
+
+.ec-cart-item__control svg {
+	color: var(--dark-brown) !important;
+}
+
+@media screen and (orientation: landscape) {
+	.grid__products {
+		display: flex !important;
+		width: 100% !important;
+		justify-content: space-around !important;
+	}
+
+	.grid-product {
+		width: 40% !important;
+		margin: auto 10px !important;
+		border: 1px solid var(--dark-brown) !important;
+	}
+}

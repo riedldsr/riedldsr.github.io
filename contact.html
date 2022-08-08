@@ -2,6 +2,8 @@
 	<head>
 		<title>Depicted Cryptids - Contact</title>
 		<link rel="stylesheet" href="style.css">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=yes">
 	</head>
 	<body>
 		<header>
@@ -13,35 +15,39 @@
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="store.html">Store</a></li>
 					<li>Contact</li>
 				</ul>
 			</div>
 			<div id="overlay" onclick="toggleOverlay()"></div>
 		</header>
-		<main>
-			<div id="mainContent">
-				<h1>Contact</h1>
-				<div class="paragraphWrapper">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Cras sed odio in neque lacinia efficitur at at mi.
-						Vivamus finibus tellus eu congue pellentesque.
-						Nulla sed urna lobortis, pretium metus nec, pulvinar dui.
-					</p>
-				</div>
-				<div id="contactForm">
-					<input type="text" placeholder="Name" id="inputName">
-					<input type="text" placeholder="Email" id="inputEmail">
-					<input type="text" placeholder="Subject" id="inputSubject">
-					<textarea placeholder="Message" id="inputMessage"></textarea>
-					<button id="submit" onclick="sendEmail()">Submit</button>
-				</div>
+		<div id="mainContent">
+			<h1>Contact</h1>
+			<div class="paragraphWrapper">
+				<p>
+					Have any questions or comments you'd like to leave for me? 
+					Simply type your contact information below, and I will respond within a few business days!
+					<br>
+					<br>
+					Thank you.  
+				</p>
 			</div>
-		</main>
+			<div id="contactForm">
+				<input type="text" placeholder="Name" id="inputName">
+				<input type="text" placeholder="Email" id="inputEmail">
+				<input type="text" placeholder="Subject" id="inputSubject">
+				<textarea placeholder="Message" id="inputMessage"></textarea>
+				<button id="submit" onclick="sendEmail()">Submit</button>
+			</div>
+		</div>
 		<footer>
 			<img src="images/head-swoop.svg" class="decorator" />
-			<img src="images/instagram-icon.svg" id="instagram" class="social" />
-			<img src="images/facebook-icon.svg" id="facebook" class="social" />
+			<a href="https://www.instagram.com/depicted_cryptids/" target="_blank">
+				<img src="images/instagram-icon.svg" id="instagram" class="social" />
+			</a>
+			<a href="https://www.facebook.com/Depicted-Cryptids-101521429313847" target="_blank">
+				<img src="images/facebook-icon.svg" id="facebook" class="social" />
+			</a>
 		</footer>
 	</body>
 	<script src="script.js" type="text/javascript"></script>

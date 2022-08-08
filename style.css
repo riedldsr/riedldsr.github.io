@@ -46,8 +46,6 @@ main {
 	height: 100%;
 	width: 100vw;
 	position: relative;
-	background-image: url("images/background-canvas.jpg");
-	background-repeat: repeat;
 }
 
 main.blur {
@@ -86,7 +84,7 @@ header .decorator {
 	top: 1rem;
 	left: 1rem;
 	z-index: 3;
-	height: 5rem;
+	height: 4rem;
 }
 
 #menuIcon {
@@ -197,6 +195,10 @@ footer .social:hover {
 }
 
 /* Home */
+
+#mainContent.home {
+	position: relative;
+}
 
 main h2 {
 	position: absolute;

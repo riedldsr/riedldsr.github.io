@@ -2,8 +2,7 @@
 	<head>
 		<title>Depicted Cryptids - Contact</title>
 		<link rel="stylesheet" href="style.css">
-		<meta name="HandheldFriendly" content="true"/>
-		<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<header>
@@ -21,25 +20,27 @@
 			</div>
 			<div id="overlay" onclick="toggleOverlay()"></div>
 		</header>
-		<div id="mainContent">
-			<h1>Contact</h1>
-			<div class="paragraphWrapper">
-				<p>
-					Have any questions or comments you'd like to leave for me? 
-					Simply type your contact information below, and I will respond within a few business days!
-					<br>
-					<br>
-					Thank you.  
-				</p>
+		<main>
+			<div id="mainContent">
+				<h1>Contact</h1>
+				<div class="paragraphWrapper">
+					<p>
+						Have any questions or comments you'd like to leave for me? 
+						Simply type your contact information below, and I will respond within a few business days!
+						<br>
+						<br>
+						Thank you.  
+					</p>
+				</div>
+				<div id="contactForm">
+					<input type="text" placeholder="Name" id="inputName">
+					<input type="text" placeholder="Email" id="inputEmail">
+					<input type="text" placeholder="Subject" id="inputSubject">
+					<textarea placeholder="Message" id="inputMessage"></textarea>
+					<button id="submit" onclick="sendEmail()">Submit</button>
+				</div>
 			</div>
-			<div id="contactForm">
-				<input type="text" placeholder="Name" id="inputName">
-				<input type="text" placeholder="Email" id="inputEmail">
-				<input type="text" placeholder="Subject" id="inputSubject">
-				<textarea placeholder="Message" id="inputMessage"></textarea>
-				<button id="submit" onclick="sendEmail()">Submit</button>
-			</div>
-		</div>
+		</main>
 		<footer>
 			<img src="images/head-swoop.svg" class="decorator" />
 			<a href="https://www.instagram.com/depicted_cryptids/" target="_blank">

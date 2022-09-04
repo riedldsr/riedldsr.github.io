@@ -121,6 +121,23 @@
 	margin-top: 5% !important;
 }
 
+.ec-cart-step__wrap {
+	animation: none !important;
+}
+
+.ec-radiogroup__items {
+	border: 0px !important;
+}
+
+.ec-radiogroup__item--multiline {
+	box-shadow: none !important;
+	border: 1px solid var(--dark-brown) !important;
+}
+
+.ec-radiogroup::before, .ec-radiogroup::after {
+	background: none !important;
+}
+
 @media screen and (orientation: landscape) {
 	.grid__products {
 		display: flex !important;

@@ -25,20 +25,6 @@ function toggleOverlay() {
 	}
 }
 
-let portfolioImages = document.querySelectorAll(".imageContainer>img");
-for(let i = 0; i < portfolioImages.length; i++) {
-	portfolioImages[i].addEventListener('click', function(e) {
-		let overlay = document.querySelector("#overlay");
-		let main = document.querySelector("main");
-		let image = document.querySelector("#fullScreenImage");
-
-		overlay.classList.add("displayed");
-		main.classList.add("blur");
-		image.classList.add("displayed");
-		image.src = e.target.src;
-	});
-}
-
 function sendEmail() {
 	inputName = document.querySelector("#inputName").value;
 	inputEmail = document.querySelector("#inputEmail").value;
